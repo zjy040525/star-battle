@@ -1,0 +1,125 @@
+#header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 8px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 16px;
+    backdrop-filter: blur(4px);
+}
+
+/*show playing status.*/
+.playing > img {
+    height: 48px !important;
+}
+
+.playing > section {
+    visibility: visible !important;
+}
+
+/*LOGO*/
+#header > img {
+    height: 84px;
+    transition: height 250ms ease-in-out;
+    animation: Logo 1s ease-in-out;
+}
+
+/*Statusbar*/
+#header > section {
+    width: 32%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
+}
+
+#header > section > div > i,
+#header > section > i {
+    width: 32px;
+    height: 32px;
+}
+
+#header > section div {
+    display: flex;
+    align-items: center;
+}
+
+#header > section div span {
+    margin-left: 7px;
+}
+
+#header > section:last-child i {
+    cursor: pointer;
+    transition: filter 250ms ease-in-out;
+}
+
+/*Shadow effect.*/
+#header > section:last-child i:hover {
+    filter: drop-shadow(0 0 16px #fff);
+}
+
+/*Icon configuration.*/
+#fuelIcon {
+    background-image: url("../images/fuel-icon.png");
+    position: relative;
+}
+
+#fuelFill {
+    height: 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/fuel-fill.png") bottom no-repeat;
+    background-size: cover;
+    transition: height 250ms ease-in-out;
+}
+
+#scoreIcon {
+    background-image: url("../images/score-icon.png");
+}
+
+#timeIcon {
+    background-image: url("../images/time-icon.png");
+}
+
+#pause {
+    background-image: url("../images/pause.png");
+}
+
+.unpause {
+    background-image: url("../images/play.png") !important;
+}
+
+#mute {
+    background-image: url("../images/mute.png");
+}
+
+.unmute {
+    background-image: url("../images/unmute.png") !important;
+}
+
+#fontInc {
+    background-image: url("../images/font_inc.png");
+}
+
+#fontDec {
+    background-image: url("../images/font_dec.png");
+}
+
+@keyframes Logo {
+    from {
+        transform: translateY(-120px) scale(0) rotate(0);
+    }
+    50% {
+        transform: translateY(40px) scale(0.9) rotate(360deg);
+    }
+    to {
+        transform: translateY(0) scale(1) rotate(360deg);
+    }
+}

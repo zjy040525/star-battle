@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Battle</title>
+    <link rel="icon" href="./images/logo.png"/>
+    <link rel="stylesheet" href="./styles/index.css"/>
+    <script src="./js/main.js" type="module"></script>
+</head>
+<body>
+<!--root-->
+<div id="app">
+    <!--header statusbar-->
+    <div id="header">
+        <section>
+            <div>
+                <i id="fuelIcon"><i id="fuelFill"></i></i>
+                <span id="fuelValue">15</span>
+            </div>
+            <div>
+                <i id="scoreIcon"></i>
+                <span id="scoreValue">0</span>
+            </div>
+            <div>
+                <i id="timeIcon"></i>
+                <span id="timeValue">0</span>
+            </div>
+        </section>
+        <img src="./images/logo.png" alt="LOGO"/>
+        <section>
+            <i id="pause"></i>
+            <i id="mute"></i>
+            <i id="fontInc"></i>
+            <i id="fontDec"></i>
+        </section>
+    </div>
+    <!--gaming container-->
+    <div id="container">
+        <!--start guide page-->
+        <div id="start" class="modal">
+            <section>
+                <h1>How to Play Star Battle.</h1>
+                <p>1. Move the spaceship using the sensible areas in the screen;</p>
+                <p>2. The timer present the time lapsed;</p>
+                <p>3. The fuel counter show the remain fuel;</p>
+                <p>
+                    4. During the flight, the spaceship needs to destroy the asteroids
+                    and enemy spaceships that are presented in the space;
+                </p>
+                <p>5. You can shoot pressing Space Bar;</p>
+                <p>
+                    6. If the spaceship hits a asteroid or another spaceship, you lose
+                    15 points of fuel;
+                </p>
+                <p>
+                    7. Enemy spaceship needs 1 shot to be destroyed, you will get 5
+                    points for each enemy destroyed;
+                </p>
+                <p>
+                    8. Asteroid needs 2 shots to be destroyed, you will get 10 points
+                    for each asteroid destroyed;
+                </p>
+                <p>9. If you destroy a friendly spaceship, you lose 10 points;</p>
+                <p>
+                    10. During the flight, the spaceship needs to collect fuel in the
+                    space;
+                </p>
+                <p>
+                    11. You can pause the game clicking in a button pause, or pressing
+                    the letter "p";
+                </p>
+                <p>12. Go beyond all limits;</p>
+                <p>Battle in Space with Star Battle Championship...</p>
+            </section>
+            <section class="align-center">
+                <button id="startBtn">Start Game</button>
+            </section>
+            <div id="previewPlanet">
+                <img id="previewImage" src="" alt="Preview Planet Image.">
+            </div>
+        </div>
+        <!--starting page-->
+        <div id="play" class="hidden">
+            <div id="box"></div>
+            <div id="player"><i id="tag"></i></div>
+            <div id="joystick">
+                <span id="toUp"></span>
+                <span id="toLeft"></span>
+                <span id="toRight"></span>
+                <span id="toDown"></span>
+            </div>
+        </div>
+        <!--game over page-->
+        <div id="over" class="hidden align-center modal">
+            <section>
+                <h1>Game Over</h1>
+                <h3><label for="playerName">PLEASE ENTER YOUR NAME</label></h3>
+                <input type="text" id="playerName"/>
+            </section>
+            <section>
+                <button id="continueBtn" disabled>Continue</button>
+            </section>
+        </div>
+        <!--rank page-->
+        <div id="rank" class="hidden align-center modal">
+            <section>
+                <h1>TOP 10</h1>
+                <div>
+                    <span>POSITION</span>
+                    <span>NAME</span>
+                    <span>SCORE</span>
+                    <span>TIME</span>
+                </div>
+                <ul id="rankList"></ul>
+            </section>
+            <section>
+                <button id="replayBtn">Start Game</button>
+            </section>
+        </div>
+    </div>
+    <div id="bg"></div>
+</div>
+</body>
+</html>

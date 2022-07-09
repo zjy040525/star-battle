@@ -1,0 +1,57 @@
+/*Page default styles.*/
+@import url("./default.css");
+/*Global common styles.*/
+@import url("./common.css");
+/*Header chunk styles.*/
+@import url("./header.css");
+/*Gaming container..*/
+@import url("./container.css");
+/*Start page styles.*/
+@import url("./start.css");
+/*Play page styles.*/
+@import url("./play.css");
+/*Over page styles.*/
+@import url("./over.css");
+/*Rank page styles.*/
+@import url("./rank.css");
+
+/*Root*/
+#app {
+    width: 960px;
+    height: 600px;
+    box-shadow: 0 0 12px #c73c30;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+#bg {
+    width: 2000px;
+    height: 2000px;
+    background: url("../images/bg.jpg") repeat;
+    animation: Background 60s linear infinite,
+    Background2 420s linear infinite reverse;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -999;
+}
+
+/*Background image anim*/
+@keyframes Background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1920px 0;
+    }
+}
+
+@keyframes Background2 {
+    from {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

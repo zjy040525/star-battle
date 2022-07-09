@@ -1,0 +1,48 @@
+/*Text center.*/
+.align-center {
+    text-align: center;
+}
+
+/*Hide elem.*/
+.hidden {
+    display: none !important;
+}
+
+/*Game UI*/
+.modal {
+    width: 620px;
+    height: 420px;
+    padding: 24px;
+    position: absolute;
+    left: 0;
+    top: 92px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 0 1px #fff;
+    backdrop-filter: blur(4px);
+    animation: Modal 1s ease-in-out;
+}
+
+/*Pause flags.*/
+.paused {
+    animation-play-state: paused !important;
+}
+
+.paused #joystick > span:hover {
+    opacity: 0 !important;
+    cursor: default !important;
+}
+
+@keyframes Modal {
+    from {
+        transform: scale(0) translateX(-999px) rotate3d(1, 1, 1, 360deg);
+    }
+    to {
+        transform: scale(1);
+    }
+}
