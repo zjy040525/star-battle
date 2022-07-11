@@ -1,7 +1,7 @@
-import Start from "./scenes/Start.js";
-import Play from "./scenes/Play.js";
-import Over from "./scenes/Over.js";
-import Rank from "./scenes/Rank.js";
+import Start from "./scenes/Start";
+import Play from "./scenes/Play";
+import Over from "./scenes/Over";
+import Rank from "./scenes/Rank";
 
 class Game {
   #scenes;

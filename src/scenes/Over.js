@@ -1,7 +1,7 @@
-import Scene from "../classes/Scene.js";
-import { Audio } from "../classes/Audio.js";
-import { $over } from "../libs/elem.js";
-import Game, { game } from "../Game.js";
+import Scene from "../classes/Scene";
+import { Audio } from "../classes/Audio";
+import { $over } from "../libs/elem";
+import Game, { game } from "../Game";
 
 export default class Over extends Scene {
   constructor() {

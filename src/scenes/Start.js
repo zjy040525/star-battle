@@ -1,8 +1,8 @@
-import Scene from "../classes/Scene.js";
-import initAudioClasses from "../classes/Audio.js";
-import { $start } from "../libs/elem.js";
-import { game } from "../Game.js";
-import rnd from "../utils/rnd.js";
+import Scene from "../classes/Scene";
+import initAudioClasses from "../classes/Audio";
+import { $start } from "../libs/elem";
+import { game } from "../Game";
+import rnd from "../utils/rnd";
 
 export default class Start extends Scene {
   constructor() {

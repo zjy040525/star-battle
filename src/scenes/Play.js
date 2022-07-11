@@ -1,10 +1,10 @@
-import Scene from "../classes/Scene.js";
-import Controller from "../classes/Controller.js";
-import { Audio } from "../classes/Audio.js";
-import { $app, $header, $play } from "../libs/elem.js";
-import Game, { game } from "../Game.js";
-import Entity from "../classes/Entity.js";
-import collision from "../utils/collision.js";
+import Scene from "../classes/Scene";
+import Controller from "../classes/Controller";
+import { Audio } from "../classes/Audio";
+import { $app, $header, $play } from "../libs/elem";
+import Game, { game } from "../Game";
+import Entity from "../classes/Entity";
+import collision from "../utils/collision";
 
 class Header extends Scene {
   constructor() {

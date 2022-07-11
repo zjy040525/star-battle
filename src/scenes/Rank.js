@@ -1,6 +1,6 @@
-import Scene from "../classes/Scene.js";
-import { $rank } from "../libs/elem.js";
-import { game } from "../Game.js";
+import Scene from "../classes/Scene";
+import { $rank } from "../libs/elem";
+import { game } from "../Game";
 
 export default class Rank extends Scene {
   constructor() {

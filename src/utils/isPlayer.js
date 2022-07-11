@@ -1,4 +1,4 @@
-import { $play } from "../libs/elem.js";
+import { $play } from "../libs/elem";
 
 const isPlayer = (elem) => elem === $play.player;
 

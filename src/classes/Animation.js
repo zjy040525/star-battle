@@ -1,4 +1,4 @@
-import rnd from "../utils/rnd.js";
+import rnd from "../utils/rnd";
 
 export default class Animation {
   static #easing = ["linear", "ease", "ease-in", "ease-out", "ease-in-out"];

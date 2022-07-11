@@ -1,10 +1,10 @@
-import rnd from "../utils/rnd.js";
-import Animation from "./Animation.js";
-import Game from "../Game.js";
-import { Audio } from "./Audio.js";
-import isBullet from "../utils/isBullet.js";
-import isPlayer from "../utils/isPlayer.js";
-import { $header, $play } from "../libs/elem.js";
+import rnd from "../utils/rnd";
+import Animation from "./Animation";
+import Game from "../Game";
+import { Audio } from "./Audio";
+import isBullet from "../utils/isBullet";
+import isPlayer from "../utils/isPlayer";
+import { $header, $play } from "../libs/elem";
 
 export default class Entity {
   static asteroidColors = [
