@@ -2,7 +2,7 @@ let Audio = class {
   // Expose Audio to the outside.
 };
 // Use a function to declare the audio class to resolve the warning in the browser console.
-const initAudioClasses = (_) => {
+const initAudioClasses = () => {
   if (Audio.ctx) return;
   // Create global audio context.
   const aCtx = new AudioContext();
@@ -22,7 +22,7 @@ const initAudioClasses = (_) => {
 
     constructor(filename, audioConfig) {
       this.audioConfig = audioConfig;
-      this.audio = fetch(`./src/assets/sounds/${filename}`)
+      this.audio = fetch(`./assets/sounds/${filename}`)
         .then((res) => res.arrayBuffer())
         .then((buf) => aCtx.decodeAudioData(buf))
         .then((decoded) => {
@@ -42,7 +42,7 @@ const initAudioClasses = (_) => {
     }
 
     start(repeat) {
-      this.audio.then((_) => {
+      this.audio.then(() => {
         // Play audio.
         this.src.start();
         if (repeat) {
@@ -52,7 +52,7 @@ const initAudioClasses = (_) => {
     }
 
     stop() {
-      this.audio.then((_) => {
+      this.audio.then(() => {
         // Stopped audio.
         this.src.stop();
         this.#createBufferSource();

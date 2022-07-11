@@ -26,7 +26,7 @@
 #player {
   width: 60px;
   height: 54px;
-  background-image: url("../assets/images/player.gif");
+  background-image: url("../../public/assets/images/player.gif");
   left: 16px;
   top: calc(50% - 27px);
   position: absolute;
@@ -42,7 +42,7 @@
   height: 100%;
   animation: Tag 2s ease-in-out infinite;
   transform-origin: bottom left;
-  background-image: url("../assets/images/tag.png");
+  background-image: url("../../public/assets/images/tag.png");
 }
 
 /*Joystick controller*/
@@ -80,7 +80,7 @@
 }
 
 #toUp:hover {
-  cursor: url("../assets/images/up.png") 0 0, pointer;
+  cursor: url("../../public/assets/images/up.png") 0 0, pointer;
 }
 
 #toRight {
@@ -90,7 +90,7 @@
 }
 
 #toRight:hover {
-  cursor: url("../assets/images/right.png") 0 0, pointer;
+  cursor: url("../../public/assets/images/right.png") 0 0, pointer;
 }
 
 #toDown {
@@ -100,7 +100,7 @@
 }
 
 #toDown:hover {
-  cursor: url("../assets/images/down.png") 0 0, pointer;
+  cursor: url("../../public/assets/images/down.png") 0 0, pointer;
 }
 
 #toLeft {
@@ -110,14 +110,14 @@
 }
 
 #toLeft:hover {
-  cursor: url("../assets/images/left.png") 0 0, pointer;
+  cursor: url("../../public/assets/images/left.png") 0 0, pointer;
 }
 
 /*Entity configuration.*/
 .fuel {
   width: 32px;
   height: 32px;
-  background-image: url("../assets/images/fuel.png");
+  background-image: url("../../public/assets/images/fuel.png");
   animation: Rotate 15s linear infinite;
   z-index: 99;
 }
@@ -130,7 +130,7 @@
 }
 
 .friend {
-  background-image: url("../assets/images/friend.gif");
+  background-image: url("../../public/assets/images/friend.gif");
 }
 
 .player-bullet,
@@ -141,12 +141,12 @@
 }
 
 .player-bullet {
-  background-image: url("../assets/images/player-bullet.png");
+  background-image: url("../../public/assets/images/player-bullet.png");
   animation: Growing 2s ease-in-out infinite;
 }
 
 .enemy-bullet {
-  background-image: url("../assets/images/enemy-bullet.png");
+  background-image: url("../../public/assets/images/enemy-bullet.png");
 }
 
 .asteroid {

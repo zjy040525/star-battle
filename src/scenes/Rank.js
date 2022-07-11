@@ -45,7 +45,7 @@ export default class Rank extends Scene {
       });
     $rank.replayBtn.addEventListener(
       "click",
-      (_) => {
+      () => {
         game.next();
       },
       {

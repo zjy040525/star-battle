@@ -36,7 +36,7 @@ export default class Entity {
       },
       end: {
         x: (el) => rnd(0, $play.box.offsetWidth - el.offsetWidth),
-        y: (_) => $play.box.offsetHeight,
+        y: () => $play.box.offsetHeight,
       },
       duration: [9000, 16000],
       collidedFn(_target, elem) {
@@ -48,7 +48,7 @@ export default class Entity {
     {
       className: "asteroid",
       start: {
-        x: (_) => $play.box.offsetWidth,
+        x: () => $play.box.offsetWidth,
         y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
@@ -60,8 +60,8 @@ export default class Entity {
         elem.hitCount = 0;
         elem.colors = this.asteroidColors[index];
         elem.style.width = elem.style.height = `${rnd(100, 120)}px`;
-        elem.style.backgroundImage = `url("./src/assets/images/asteroids/${index}.png")`;
-        elem.destroy = (_) => {
+        elem.style.backgroundImage = `url("./assets/images/asteroids/${index}.png")`;
+        elem.destroy = () => {
           Animation.burst(elem);
           Audio.state.destroyed.start(true);
         };
@@ -81,7 +81,7 @@ export default class Entity {
     {
       className: "friend",
       start: {
-        x: (_) => $play.box.offsetWidth,
+        x: () => $play.box.offsetWidth,
         y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
@@ -103,7 +103,7 @@ export default class Entity {
     {
       className: "enemy",
       start: {
-        x: (_) => $play.box.offsetWidth,
+        x: () => $play.box.offsetWidth,
         y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
@@ -112,11 +112,11 @@ export default class Entity {
       duration: [9000, 16000],
       provide(elem) {
         const index = rnd(0, 2);
-        elem.next = (_) => (elem.nextTime = rnd(1500, 3000));
+        elem.next = () => (elem.nextTime = rnd(1500, 3000));
         // Refresh bullet fire cool-down.
         elem.next();
         elem.colors = this.enemyColors[index];
-        elem.style.backgroundImage = `url("./src/assets/images/enemy${index}.gif")`;
+        elem.style.backgroundImage = `url("./assets/images/enemy${index}.gif")`;
       },
       collidedFn(target, elem) {
         if (isPlayer(target)) {
@@ -133,7 +133,7 @@ export default class Entity {
     {
       className: "big-planet",
       start: {
-        x: (_) => $play.box.offsetWidth,
+        x: () => $play.box.offsetWidth,
         y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
@@ -142,7 +142,7 @@ export default class Entity {
       duration: [5000, 8000],
       provide(elem) {
         elem.style.width = elem.style.height = `${rnd(130, 150)}px`;
-        elem.style.backgroundImage = `url("./src/assets/images/planets/big${rnd(
+        elem.style.backgroundImage = `url("./assets/images/planets/big${rnd(
           0,
           5
         )}.png")`;
@@ -151,7 +151,7 @@ export default class Entity {
     {
       className: "small-planet",
       start: {
-        x: (_) => $play.box.offsetWidth,
+        x: () => $play.box.offsetWidth,
         y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
@@ -160,7 +160,7 @@ export default class Entity {
       duration: [9000, 12000],
       provide(elem) {
         elem.style.width = elem.style.height = `${rnd(30, 40)}px`;
-        elem.style.backgroundImage = `url("./src/assets/images/planets/small${rnd(
+        elem.style.backgroundImage = `url("./assets/images/planets/small${rnd(
           0,
           5
         )}.png")`;

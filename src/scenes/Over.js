@@ -24,7 +24,7 @@ export default class Over extends Scene {
     };
     $over.continueBtn.addEventListener(
       "click",
-      (_) => {
+      () => {
         const tempData = {
           name: this.state.name,
           score: Game.state.score,

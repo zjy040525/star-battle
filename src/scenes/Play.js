@@ -35,8 +35,8 @@ class Header extends Scene {
   setup() {
     this.scene.classList.add(this.className);
     // Btn controls.
-    $header.pauseBtn.onclick = (_) => Header.togglePlay();
-    $header.muteBtn.onclick = (_) => {
+    $header.pauseBtn.onclick = () => Header.togglePlay();
+    $header.muteBtn.onclick = () => {
       if (Game.props.paused || !Game.playing) return;
       if (Game.props.muted) {
         Audio.setVolume();
@@ -46,12 +46,12 @@ class Header extends Scene {
       Game.props.muted = !Game.props.muted;
       $header.muteBtn.classList.toggle("unmute");
     };
-    $header.fontIncBtn.onclick = (_) => {
+    $header.fontIncBtn.onclick = () => {
       if (Game.props.paused || !Game.playing || Game.props.fontSize >= 24)
         return;
       this.scene.style.fontSize = `${++Game.props.fontSize}px`;
     };
-    $header.fontDecBtn.onclick = (_) => {
+    $header.fontDecBtn.onclick = () => {
       if (Game.props.paused || !Game.playing || Game.props.fontSize <= 16)
         return;
       this.scene.style.fontSize = `${--Game.props.fontSize}px`;
@@ -91,8 +91,8 @@ class Player {
   _state = { ...this.state };
 
   static on(obj, listener) {
-    obj.onmousemove = (_) => listener(true);
-    obj.onmouseleave = (_) => listener(false);
+    obj.onmousemove = () => listener(true);
+    obj.onmouseleave = () => listener(false);
   }
 
   static goto({ cond, position, steps, max }) {
@@ -225,7 +225,7 @@ class Player {
         Entity.createBullet($play.player);
       }
     };
-    document.onkeyup = (_) => {
+    document.onkeyup = () => {
       this.state.fire = true;
       this.state.keyPause = true;
     };
@@ -256,7 +256,7 @@ export default class Play extends Scene {
       return;
     }
     // Set interval loop callbacks.
-    this.interval = ctx.setInterval(this.interval, 1000, (_) => {
+    this.interval = ctx.setInterval(this.interval, 1000, () => {
       Entity.createEntity();
       Game.state.fuel--;
     });
@@ -278,7 +278,7 @@ export default class Play extends Scene {
     this.#player.setup();
     Audio.state.background.start();
     // Delay exec handler, player anim duration set.
-    setTimeout((_) => {
+    setTimeout(() => {
       this.#controller.on();
       // controller context.
       Play.ctx = this.#controller;

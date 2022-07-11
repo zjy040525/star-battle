@@ -19,7 +19,7 @@ export default class Animation {
           easing,
         }
       )
-      .finished.then((_) => entity.remove());
+      .finished.then(() => entity.remove());
   }
 
   static zoom(obj) {
@@ -82,12 +82,12 @@ export default class Animation {
               easing: "ease-out",
             }
           )
-          .finished.then((_) => {
+          .finished.then(() => {
             particle.remove();
             return Promise.resolve();
           })
       );
     }
-    Promise.all(animQueue).then((_) => entity.remove());
+    Promise.all(animQueue).then(() => entity.remove());
   }
 }
