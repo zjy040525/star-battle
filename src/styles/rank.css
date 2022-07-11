@@ -1,0 +1,22 @@
+#rank > section:first-child {
+  padding: 0 48px;
+}
+
+#rank > section span {
+  width: 120px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*Space between align.*/
+#rank > section > div,
+#rankList > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+#rank > section > div {
+  font-weight: bold;
+  line-height: 2.5;
+}

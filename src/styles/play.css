@@ -1,0 +1,223 @@
+#play {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#box * {
+  position: absolute;
+}
+
+/*Burst effect elem.*/
+#box > span > span {
+  animation: Growing 2s ease-in-out infinite;
+}
+
+#player {
+  width: 60px;
+  height: 54px;
+  background-image: url("../assets/images/player.gif");
+  left: 16px;
+  top: calc(50% - 27px);
+  position: absolute;
+  z-index: 2;
+  animation: Growing 2s ease-in-out infinite, Player 2s ease-in-out;
+}
+
+#tag {
+  position: absolute;
+  left: 8px;
+  bottom: 20px;
+  width: 42px;
+  height: 100%;
+  animation: Tag 2s ease-in-out infinite;
+  transform-origin: bottom left;
+  background-image: url("../assets/images/tag.png");
+}
+
+/*Joystick controller*/
+#joystick {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: Joystick 2s ease-in-out infinite;
+}
+
+#joystick > span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  opacity: 0;
+}
+
+#joystick > span:hover {
+  opacity: 0.05;
+}
+
+#toUp {
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -353px) rotate(45deg);
+}
+
+#toUp:hover {
+  cursor: url("../assets/images/up.png") 0 0, pointer;
+}
+
+#toRight {
+  left: 0;
+  top: 50%;
+  transform: translate(353px, -50%) rotate(45deg);
+}
+
+#toRight:hover {
+  cursor: url("../assets/images/right.png") 0 0, pointer;
+}
+
+#toDown {
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 353px) rotate(45deg);
+}
+
+#toDown:hover {
+  cursor: url("../assets/images/down.png") 0 0, pointer;
+}
+
+#toLeft {
+  left: 0;
+  top: 50%;
+  transform: translate(-353px, -50%) rotate(45deg);
+}
+
+#toLeft:hover {
+  cursor: url("../assets/images/left.png") 0 0, pointer;
+}
+
+/*Entity configuration.*/
+.fuel {
+  width: 32px;
+  height: 32px;
+  background-image: url("../assets/images/fuel.png");
+  animation: Rotate 15s linear infinite;
+  z-index: 99;
+}
+
+.friend,
+.enemy {
+  width: 60px;
+  height: 54px;
+  z-index: 88;
+}
+
+.friend {
+  background-image: url("../assets/images/friend.gif");
+}
+
+.player-bullet,
+.enemy-bullet {
+  width: 60px;
+  height: 20px;
+  z-index: 77;
+}
+
+.player-bullet {
+  background-image: url("../assets/images/player-bullet.png");
+  animation: Growing 2s ease-in-out infinite;
+}
+
+.enemy-bullet {
+  background-image: url("../assets/images/enemy-bullet.png");
+}
+
+.asteroid {
+  animation: Rotate 20s linear infinite;
+  z-index: 55;
+}
+
+.big-planet {
+  z-index: 22;
+  animation: Rotate 30s linear infinite;
+}
+
+.small-planet {
+  z-index: 11;
+  animation: Rotate 15s linear infinite;
+}
+
+/*All amin.*/
+@keyframes Rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes Growing {
+  from {
+    filter: drop-shadow(0 0 8px #fff);
+  }
+  50% {
+    filter: drop-shadow(0 0 16px #fff);
+  }
+  to {
+    filter: drop-shadow(0 0 8px #fff);
+  }
+}
+
+@keyframes Tag {
+  from {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes Player {
+  from {
+    left: -60px;
+  }
+  50% {
+    left: 70%;
+  }
+  to {
+    left: 16px;
+  }
+}
+
+@keyframes Joystick {
+  from {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+  }
+  to {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
+  }
+}
