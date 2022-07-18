@@ -1,8 +1,7 @@
-# Star Battle
+# Introduction
 
-该项目为[2022年浙江省技工院校网站设计与开发技能竞赛](http://rlsbt.zj.gov.cn/art/2022/5/30/art_1229569595_58929499.html)的赛题。
-
-[查看此次比赛的最终结果](https://mp.weixin.qq.com/s/a7Yfhvau8aaEpaue4yBszA)
+该项目为[2022年浙江省技工院校网站设计与开发技能竞赛](http://rlsbt.zj.gov.cn/art/2022/5/30/art_1229569595_58929499.html)的赛题，
+关于此次比赛想要了解更多请[点击此处](https://mp.weixin.qq.com/s/a7Yfhvau8aaEpaue4yBszA)。
 
 # Getting Started
 
