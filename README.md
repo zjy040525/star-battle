@@ -71,7 +71,7 @@ pnpm preview
     - scenes（游戏场景，每个场景对应不同的游戏阶段。）
     - styles（页面所有的样式）
     - utils（工具函数）
-    - Game.js（游戏唯一的进程管理器）
+    - Game.js（游戏唯一的流程管理器）
     - main.js（入口函数）
 - .editorconfig（编辑器代码规范配置文件）
 - .gitattributes（git中文件的换行符配置）
@@ -84,3 +84,10 @@ pnpm preview
 - prettier.config.js（prettier代码规范配置文件）
 - README.md（自述文件）
 - vite.config.js（脚手架的配置文件）
+
+# 开发计划
+
+- [x] 使用模块化开发
+- [x] 弃用[setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)定时器，使用更为先进的 [requestAnimationFrame API](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame) 监听游戏的各种变化。
+- [ ] 使用[TypeScript](https://www.typescriptlang.org/)重构项目
+- [ ] 使用[Canvas API](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)重写逻辑判定
