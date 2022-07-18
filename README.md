@@ -76,6 +76,7 @@ pnpm preview
 - .gitattributes（git中文件的换行符配置）
 - .gitignore（提交时git会忽略哪些文件）
 - .prettierignore（prettier在格式化时会忽略哪些文件）
+- CHANGELOG.md（更新日志）
 - index.html（网页入口文件）
 - LICENSE（开源协议）
 - package.json（该工程的配置文件）
