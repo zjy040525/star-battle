@@ -22,7 +22,7 @@ const initAudioClasses = () => {
 
     constructor(filename, audioConfig) {
       this.audioConfig = audioConfig;
-      this.audio = fetch(`./assets/sounds/${filename}`)
+      this.audio = fetch(`/common/sounds/${filename}`)
         .then((res) => res.arrayBuffer())
         .then((buf) => aCtx.decodeAudioData(buf))
         .then((decoded) => {

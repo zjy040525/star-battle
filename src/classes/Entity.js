@@ -15,16 +15,7 @@ export default class Entity {
   ];
   static enemyColors = [
     ["#9fcfee", "#64ad48", "#006838", "#009444", "#ffffff"],
-    [
-      "#0f52b7",
-      "#cdcbc7",
-      "#c9fcfe",
-      "#fd8731",
-      "#93d52f",
-      "#facb79",
-      "#e34941",
-      "#fcfec8",
-    ],
+    ["#0f52b7", "#cdcbc7", "#c9fcfe", "#fd8731", "#93d52f", "#facb79", "#e34941", "#fcfec8"],
     ["#e8e8e7", "#6d6d66", "#862747", "#f8ac82", "#e14940", "#fbe786"],
   ];
   static entities = [
@@ -60,7 +51,7 @@ export default class Entity {
         elem.hitCount = 0;
         elem.colors = this.asteroidColors[index];
         elem.style.width = elem.style.height = `${rnd(100, 120)}px`;
-        elem.style.backgroundImage = `url("./assets/images/asteroids/${index}.png")`;
+        elem.style.backgroundImage = `url("/common/images/asteroids/${index}.png")`;
         elem.destroy = () => {
           Animation.burst(elem);
           Audio.state.destroyed.start(true);
@@ -116,7 +107,7 @@ export default class Entity {
         // Refresh bullet fire cool-down.
         elem.next();
         elem.colors = this.enemyColors[index];
-        elem.style.backgroundImage = `url("./assets/images/enemy${index}.gif")`;
+        elem.style.backgroundImage = `url("/common/images/enemies/enemy${index}.gif")`;
       },
       collidedFn(target, elem) {
         if (isPlayer(target)) {
@@ -142,10 +133,7 @@ export default class Entity {
       duration: [5000, 8000],
       provide(elem) {
         elem.style.width = elem.style.height = `${rnd(130, 150)}px`;
-        elem.style.backgroundImage = `url("./assets/images/planets/big${rnd(
-          0,
-          5
-        )}.png")`;
+        elem.style.backgroundImage = `url("/common/images/planets/big${rnd(0, 5)}.png")`;
       },
     },
     {
@@ -160,10 +148,7 @@ export default class Entity {
       duration: [9000, 12000],
       provide(elem) {
         elem.style.width = elem.style.height = `${rnd(30, 40)}px`;
-        elem.style.backgroundImage = `url("./assets/images/planets/small${rnd(
-          0,
-          5
-        )}.png")`;
+        elem.style.backgroundImage = `url("/common/images/planets/small${rnd(0, 5)}.png")`;
       },
     },
   ];
@@ -190,24 +175,23 @@ export default class Entity {
   static createBullet(deps) {
     const elem = document.createElement("span");
     if (isPlayer(deps)) {
+      elem.colors = ["#401D7E", "#6678FC", "#6596FF", "#555AB6"];
       elem.classList.add("player-bullet");
       elem.direction = 18;
       Audio.state.shoot.start(true);
     } else {
+      elem.colors = ["#A00095", "#FA00FC", "#A108B5", "#5E1674"];
       elem.classList.add("enemy-bullet");
       elem.direction = -6;
     }
     // Destroy enemy bullet, burst anim, default burst direction is left.
-    elem.destroy = (direction = [-40, -90]) => {
-      elem.colors = [
-        "#dcdddd",
-        "#e5371e",
-        "#ed7766",
-        "#5fb6df",
-        "#008acc",
-        "#f2a755",
-      ];
-      Animation.burst(elem, [3, 6], [5, 5], direction, [250, 500]);
+    elem.destroy = (offset = [-40, -90]) => {
+      Animation.burst(elem, {
+        amount: [3, 6],
+        size: [5, 5],
+        offset,
+        duration: [250, 500],
+      });
     };
     elem.collidedFn = (target, entity) => {
       if (isPlayer(target)) {

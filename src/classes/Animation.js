@@ -1,4 +1,5 @@
 import rnd from "../utils/rnd";
+import { rotate, translate } from "../utils/styles";
 
 export default class Animation {
   static #easing = ["linear", "ease", "ease-in", "ease-out", "ease-in-out"];
@@ -36,17 +37,18 @@ export default class Animation {
 
   static burst(
     entity,
-    amount = [8, 20],
-    size = [4, 12],
-    offset = [80, 160],
-    duration = [500, 2000]
+    burstConfig = {
+      amount: [8, 20],
+      size: [4, 12],
+      offset: [80, 160],
+      duration: [500, 2000],
+    }
   ) {
     const getAnim = entity.getAnimations();
     const animQueue = [];
+    const { amount, size, offset, duration } = burstConfig;
     // Cancel all animations.
-    getAnim
-      .filter((anim) => anim instanceof CSSAnimation)
-      .forEach((anim) => anim.cancel());
+    getAnim.filter((anim) => anim instanceof CSSAnimation).forEach((anim) => anim.cancel());
     getAnim.forEach((anim) => anim.pause());
     entity.collided = true;
     entity.style.backgroundImage = "none";
@@ -56,29 +58,22 @@ export default class Animation {
       particle.style.width = particle.style.height = `${s}px`;
       particle.style.left = particle.style.top = `calc(50% - ${s / 2}px)`;
       particle.style.borderRadius = `${rnd(8, 50)}%`;
-      particle.style.backgroundColor =
-        entity.colors[rnd(0, entity.colors.length - 1)];
+      particle.style.backgroundColor = entity.colors[rnd(0, entity.colors.length - 1)];
       entity.appendChild(particle);
       const w = entity.offsetWidth / 2 - particle.offsetWidth / 2;
       const h = entity.offsetHeight / 2 - particle.offsetHeight / 2;
-      particle.style.transform = `translate(${rnd(-w, w)}px,${rnd(
-        -h,
-        h
-      )}px) rotate(${rnd(0, 360)}deg)`;
+      particle.style.transform = translate(rnd(-w, w), rnd(-h, h)) + rotate(rnd(0, 360));
+      const [oMin, oMax] = offset;
+      const [dMin, dMax] = duration;
       animQueue.push(
         particle
           .animate(
             {
               opacity: [1, 0],
-              transform: [
-                `translate(${rnd(offset[0], offset[1])}px,${rnd(
-                  -40,
-                  40
-                )}px) rotate(${rnd(0, 360)}deg)`,
-              ],
+              transform: [translate(rnd(oMin, oMax), rnd(-40, 40)) + rotate(rnd(0, 360))],
             },
             {
-              duration: rnd(duration[0], duration[1]),
+              duration: rnd(dMin, dMax),
               easing: "ease-out",
             }
           )

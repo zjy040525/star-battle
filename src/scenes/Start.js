@@ -7,10 +7,6 @@ import rnd from "../utils/rnd";
 export default class Start extends Scene {
   constructor() {
     super("#start");
-    $start.previewImage.src = `./public/assets/images/planets/big${rnd(
-      0,
-      4
-    )}.png`;
   }
 
   mount() {
@@ -23,12 +19,10 @@ export default class Start extends Scene {
         initAudioClasses();
         game.next();
       },
-      {
-        once: true,
-      }
+      { once: true }
     );
     // Random load preview planet image.
-    $start.previewImage.src = `./assets/images/planets/big${rnd(0, 4)}.png`;
+    $start.previewImage.src = `/common/images/planets/big${rnd(0, 4)}.png`;
   }
 
   unmount() {

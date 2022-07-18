@@ -32,18 +32,10 @@ export default class Over extends Scene {
           time: Math.floor(Game.state.time),
         };
         if (localStorage.getItem("star_battle_gameData")) {
-          const getData = JSON.parse(
-            localStorage.getItem("star_battle_gameData")
-          );
-          localStorage.setItem(
-            "star_battle_gameData",
-            JSON.stringify([tempData, ...getData])
-          );
+          const getData = JSON.parse(localStorage.getItem("star_battle_gameData"));
+          localStorage.setItem("star_battle_gameData", JSON.stringify([tempData, ...getData]));
         } else {
-          localStorage.setItem(
-            "star_battle_gameData",
-            JSON.stringify([tempData])
-          );
+          localStorage.setItem("star_battle_gameData", JSON.stringify([tempData]));
         }
         game.next();
       },

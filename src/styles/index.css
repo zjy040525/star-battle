@@ -29,8 +29,7 @@
   width: 2000px;
   height: 2000px;
   background: url("../assets/images/bg.jpg") repeat;
-  animation: Background 60s linear infinite,
-    Background2 420s linear infinite reverse;
+  animation: Background 60s linear infinite, Background2 420s linear infinite reverse;
   position: absolute;
   left: 50%;
   top: 50%;

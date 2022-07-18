@@ -31,10 +31,7 @@ export default class Rank extends Scene {
           rank = tempRank + 1;
         }
         tempRank++;
-        const rankItem = [
-          rank,
-          ...Object.keys(curr).map((index) => curr[index]),
-        ];
+        const rankItem = [rank, ...Object.keys(curr).map((index) => curr[index])];
         // each all rank item.
         for (let i = 0; i < rankItem.length; i++) {
           const spanElement = document.createElement("span");

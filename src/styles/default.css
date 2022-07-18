@@ -73,6 +73,5 @@ button:active::after {
   width: 40px;
   height: 40px;
   opacity: 0.25;
-  transition: width 250ms ease-in-out, height 250ms ease-in-out,
-    opacity 500ms ease-in-out;
+  transition: width 250ms ease-in-out, height 250ms ease-in-out, opacity 500ms ease-in-out;
 }

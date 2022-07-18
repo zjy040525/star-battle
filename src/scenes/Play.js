@@ -17,9 +17,7 @@ class Header extends Scene {
     if (Game.props.paused) {
       Play.ctx.on();
       // Resume all not collided element anim.
-      animations
-        .filter((anim) => !anim.effect["target"].collided)
-        .forEach((anim) => anim.play());
+      animations.filter((anim) => !anim.effect["target"].collided).forEach((anim) => anim.play());
       Audio.ctx.resume().then();
     } else {
       Play.ctx.off();
@@ -47,13 +45,11 @@ class Header extends Scene {
       $header.muteBtn.classList.toggle("unmute");
     };
     $header.fontIncBtn.onclick = () => {
-      if (Game.props.paused || !Game.playing || Game.props.fontSize >= 24)
-        return;
+      if (Game.props.paused || !Game.playing || Game.props.fontSize >= 24) return;
       this.scene.style.fontSize = `${++Game.props.fontSize}px`;
     };
     $header.fontDecBtn.onclick = () => {
-      if (Game.props.paused || !Game.playing || Game.props.fontSize <= 16)
-        return;
+      if (Game.props.paused || !Game.playing || Game.props.fontSize <= 16) return;
       this.scene.style.fontSize = `${--Game.props.fontSize}px`;
     };
   }
@@ -176,10 +172,7 @@ class Player {
     [...Entity.getBullet(), ...Entity.getEnemyBullet()].forEach((bullet) => {
       bullet.style.left = `${bullet.offsetLeft + bullet.direction}px`;
       // Max move range.
-      if (
-        bullet.offsetLeft < -bullet.offsetWidth ||
-        bullet.offsetLeft > $play.box.offsetWidth
-      ) {
+      if (bullet.offsetLeft < -bullet.offsetWidth || bullet.offsetLeft > $play.box.offsetWidth) {
         bullet.remove();
       }
     });

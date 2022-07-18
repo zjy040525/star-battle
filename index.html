@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star Battle</title>
-    <link rel="stylesheet" href="./src/styles/index.css" />
-    <link rel="icon" href="./src/assets/images/logo.png" />
+    <title><%- title %></title>
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
     <!--root-->
@@ -27,7 +27,7 @@
             <span id="timeValue">0</span>
           </div>
         </section>
-        <img src="./src/assets/images/logo.png" alt="LOGO" />
+        <img src="/src/assets/images/logo.png" alt="LOGO" />
         <section>
           <i id="pause"></i>
           <i id="mute"></i>
@@ -45,30 +45,25 @@
             <p>2. The timer present the time lapsed;</p>
             <p>3. The fuel counter show the remain fuel;</p>
             <p>
-              4. During the flight, the spaceship needs to destroy the asteroids
-              and enemy spaceships that are presented in the space;
+              4. During the flight, the spaceship needs to destroy the asteroids and enemy
+              spaceships that are presented in the space;
             </p>
             <p>5. You can shoot pressing Space Bar;</p>
             <p>
-              6. If the spaceship hits a asteroid or another spaceship, you lose
-              15 points of fuel;
+              6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;
             </p>
             <p>
-              7. Enemy spaceship needs 1 shot to be destroyed, you will get 5
-              points for each enemy destroyed;
+              7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy
+              destroyed;
             </p>
             <p>
-              8. Asteroid needs 2 shots to be destroyed, you will get 10 points
-              for each asteroid destroyed;
+              8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid
+              destroyed;
             </p>
             <p>9. If you destroy a friendly spaceship, you lose 10 points;</p>
+            <p>10. During the flight, the spaceship needs to collect fuel in the space;</p>
             <p>
-              10. During the flight, the spaceship needs to collect fuel in the
-              space;
-            </p>
-            <p>
-              11. You can pause the game clicking in a button pause, or pressing
-              the letter "p";
+              11. You can pause the game clicking in a button pause, or pressing the letter "p";
             </p>
             <p>12. Go beyond all limits;</p>
             <p>Battle in Space with Star Battle Championship...</p>
@@ -121,6 +116,5 @@
       </div>
       <div id="bg"></div>
     </div>
-    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
