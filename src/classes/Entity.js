@@ -50,7 +50,7 @@ export default class Entity {
         const index = rnd(0, 3);
         elem.hitCount = 0;
         elem.colors = this.asteroidColors[index];
-        elem.style.width = elem.style.height = `${rnd(100, 120)}px`;
+        elem.style.width = elem.style.height = `${rnd(110, 130)}px`;
         elem.style.backgroundImage = `url("/common/images/asteroids/${index}.png")`;
         elem.destroy = () => {
           Animation.burst(elem);
@@ -132,7 +132,7 @@ export default class Entity {
       },
       duration: [5000, 8000],
       provide(elem) {
-        elem.style.width = elem.style.height = `${rnd(130, 150)}px`;
+        elem.style.width = elem.style.height = `${rnd(140, 160)}px`;
         elem.style.backgroundImage = `url("/common/images/planets/big${rnd(0, 5)}.png")`;
       },
     },
@@ -147,7 +147,7 @@ export default class Entity {
       },
       duration: [9000, 12000],
       provide(elem) {
-        elem.style.width = elem.style.height = `${rnd(30, 40)}px`;
+        elem.style.width = elem.style.height = `${rnd(40, 60)}px`;
         elem.style.backgroundImage = `url("/common/images/planets/small${rnd(0, 5)}.png")`;
       },
     },
