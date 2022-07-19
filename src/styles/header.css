@@ -75,7 +75,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("/src/assets/images/playing/fuel-fill.png") bottom no-repeat;
+  background: url("/src/assets/images/entities/fuel.png") bottom no-repeat;
   background-size: cover;
   transition: height 250ms ease-in-out;
 }

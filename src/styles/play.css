@@ -24,8 +24,8 @@
 }
 
 #player {
-  width: 60px;
-  height: 54px;
+  width: 72px;
+  height: 65px;
   background-image: url("/src/assets/images/entities/player.gif");
   left: 16px;
   top: calc(50% - 27px);
@@ -36,8 +36,8 @@
 
 #tag {
   position: absolute;
-  left: 8px;
-  bottom: 20px;
+  left: 12px;
+  bottom: 24px;
   width: 42px;
   height: 100%;
   animation: Tag 2s ease-in-out infinite;
@@ -115,8 +115,8 @@
 
 /*Entity configuration.*/
 .fuel {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background-image: url("../assets/images/entities/fuel.png");
   animation: Rotate 15s linear infinite;
   z-index: 99;
@@ -124,8 +124,8 @@
 
 .friend,
 .enemy {
-  width: 60px;
-  height: 54px;
+  width: 72px;
+  height: 65px;
   z-index: 88;
 }
 
@@ -200,7 +200,7 @@
 
 @keyframes Player {
   from {
-    left: -60px;
+    left: -72px;
   }
   50% {
     left: 70%;
