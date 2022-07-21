@@ -1,5 +1,5 @@
 import Scene from "../classes/Scene";
-import Controller from "../classes/Controller";
+import Listener from "../classes/Listener";
 import { Audio } from "../classes/Audio";
 import { $app, $header, $play } from "../libs/elem";
 import Game, { game } from "../Game";
@@ -241,7 +241,7 @@ class Player {
 export default class Play extends Scene {
   #header = new Header();
   #player = new Player();
-  #controller = new Controller((ctx) => {
+  #listener = new Listener((ctx) => {
     if (Game.state.fuel <= 0) {
       // Reset time.
       ctx.prevTime = ctx.currTime = 0;
@@ -272,9 +272,9 @@ export default class Play extends Scene {
     Audio.state.background.start();
     // Delay exec handler, player anim duration set.
     setTimeout(() => {
-      this.#controller.on();
+      this.#listener.on();
       // controller context.
-      Play.ctx = this.#controller;
+      Play.ctx = this.#listener;
       this.interval = {};
       // Set playing flag.
       Game.playing = Date.now();
@@ -283,7 +283,7 @@ export default class Play extends Scene {
 
   unmount() {
     super.uninstall();
-    this.#controller.off();
+    this.#listener.off();
     this.#header.uninstall();
     this.#player.uninstall();
     $play.box.innerHTML = "";

@@ -1,7 +1,7 @@
 // Throttling requestAnimationFrame to FPS.
 const interval = 1000 / 60;
 
-export default class Controller {
+export default class Listener {
   constructor(callback) {
     this.prevTime = 0;
     this.callback = callback;
