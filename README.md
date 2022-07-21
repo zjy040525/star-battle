@@ -7,7 +7,7 @@
 
 **不再提供在线游玩链接，需要请自行构建。**
 
-[Releases](https://github.com/chiyukikana/star-battle/releases/)中提供了不需要构建的版本，游戏需要在HTTP中运行！
+[Releases](https://github.com/Hti2022/star-battle/releases/)中提供了不需要构建的版本，游戏需要在HTTP中运行！
 
 ## 下载项目
 
@@ -88,6 +88,6 @@ pnpm preview
 # 开发计划
 
 - [x] 使用模块化开发
-- [x] 弃用[setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)定时器，使用更为先进的 [requestAnimationFrame API](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame) 监听游戏的各种变化。
+- [x] 弃用[setInterval](https://developer.mozilla.org/zh-CN/docs/Web/API/setInterval)定时器，使用更为先进的 [requestAnimationFrame API](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame) 监听游戏的各种变化。
 - [ ] 使用[TypeScript](https://www.typescriptlang.org/)重构项目
 - [ ] 使用[Canvas API](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)重写逻辑判定
