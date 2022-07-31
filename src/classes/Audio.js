@@ -36,8 +36,11 @@ const initAudioClasses = () => {
     #createBufferSource() {
       // Recreate audio buffer.
       this.src = aCtx.createBufferSource();
+      // save buffer of tempBuffer.
       this.src.buffer = this.tempBuffer;
+      // Link to gainNode, volume.
       this.src.connect(gainNode);
+      // Audio extra configurations.
       this.audioConfig?.(this.src);
     }
 
@@ -46,6 +49,7 @@ const initAudioClasses = () => {
         // Play audio.
         this.src.start();
         if (repeat) {
+          // recreate audio source of Audio Classes.
           this.#createBufferSource();
         }
       });
@@ -61,8 +65,11 @@ const initAudioClasses = () => {
   };
   // Init all audios.
   Audio.state = {
+    // playing state.
     background: new Audio("background.mp3", (audio) => (audio.loop = true)),
+    // asteroid/enemy/friend dropped audio.
     destroyed: new Audio("destroyed.mp3"),
+    // fire bullet audio.
     shoot: new Audio("shoot.mp3"),
   };
 };
