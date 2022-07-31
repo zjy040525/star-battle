@@ -81,7 +81,7 @@ pnpm preview
 - LICENSE（开源协议）
 - package.json（该工程的配置文件）
 - pnpm-lock.yaml（提供各个依赖稳定的版本信息）
-- prettier.config.js（prettier代码规范配置文件）
+- .prettierrc.json（prettier代码规范配置文件）
 - README.md（自述文件）
 - vite.config.js（脚手架的配置文件）
 
