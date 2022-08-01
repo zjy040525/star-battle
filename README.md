@@ -21,7 +21,7 @@ git clone https://github.com/Haitecins/star-battle.git
 
 ## 环境配置
 
-安装包管理器 [Node.js](https://nodejs.org/en/)，推荐使用LTS的版本。
+安装包管理器 [Node.js](https://nodejs.org/zh-cn/)，推荐使用LTS的版本。
 
 **（可选）** 安装pnpm（注：pnpm等价于npm，想要了解更多请[点击此处](https://rushjs.io/zh-cn/pages/maintainer/package_managers/)）：
 
