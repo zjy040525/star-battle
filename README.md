@@ -7,17 +7,17 @@
 
 **不再提供在线游玩链接，需要请自行构建。**
 
-[Releases](https://github.com/Hti2022/star-battle/releases/)中提供了不需要构建的版本，游戏需要在HTTP中运行！
+[Releases](https://github.com/Haitecins/star-battle/releases/)中提供了不需要构建的版本，游戏需要在HTTP中运行！
 
 ## 下载项目
 
 使用Git下载，[学习Git如何安装](https://www.cnblogs.com/xueweisuoyong/p/11914045.html)：
 
 ```shell
-git clone https://github.com/Hti2022/star-battle.git
+git clone https://github.com/Haitecins/star-battle.git
 ```
 
-或直接点击[此处下载](https://github.com/Hti2022/star-battle/archive/refs/heads/master.zip)最新版本。
+或直接点击[此处下载](https://github.com/Haitecins/star-battle/archive/refs/heads/master.zip)最新版本。
 
 ## 环境配置
 
