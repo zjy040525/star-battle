@@ -1,4 +1,4 @@
-import { game } from "./Game";
+import { game } from './Game'
 
 // Load default scene.
-game.next();
+game.next()

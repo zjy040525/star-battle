@@ -26,7 +26,7 @@
 #player {
   width: 72px;
   height: 65px;
-  background-image: url("/src/assets/images/entities/player.gif");
+  background-image: url('/src/assets/images/entities/player.gif');
   left: 16px;
   top: calc(50% - 27px);
   position: absolute;
@@ -42,7 +42,7 @@
   height: 100%;
   animation: Tag 2s ease-in-out infinite;
   transform-origin: bottom left;
-  background-image: url("/src/assets/images/playing/tag.png");
+  background-image: url('/src/assets/images/playing/tag.png');
 }
 
 /*Joystick controller*/
@@ -80,7 +80,7 @@
 }
 
 #toUp:hover {
-  cursor: url("/src/assets/images/arrows/up.png") 0 0, pointer;
+  cursor: url('/src/assets/images/arrows/up.png') 0 0, pointer;
 }
 
 #toRight {
@@ -90,7 +90,7 @@
 }
 
 #toRight:hover {
-  cursor: url("/src/assets/images/arrows/right.png") 0 0, pointer;
+  cursor: url('/src/assets/images/arrows/right.png') 0 0, pointer;
 }
 
 #toDown {
@@ -100,7 +100,7 @@
 }
 
 #toDown:hover {
-  cursor: url("/src/assets/images/arrows/down.png") 0 0, pointer;
+  cursor: url('/src/assets/images/arrows/down.png') 0 0, pointer;
 }
 
 #toLeft {
@@ -110,14 +110,14 @@
 }
 
 #toLeft:hover {
-  cursor: url("/src/assets/images/arrows/left.png") 0 0, pointer;
+  cursor: url('/src/assets/images/arrows/left.png') 0 0, pointer;
 }
 
 /*Entity configuration.*/
 .fuel {
   width: 36px;
   height: 36px;
-  background-image: url("../assets/images/entities/fuel.png");
+  background-image: url('../assets/images/entities/fuel.png');
   animation: Rotate 15s linear infinite;
   z-index: 99;
 }
@@ -130,7 +130,7 @@
 }
 
 .friend {
-  background-image: url("/src/assets/images/entities/friend.gif");
+  background-image: url('/src/assets/images/entities/friend.gif');
 }
 
 .player-bullet,
@@ -141,12 +141,12 @@
 }
 
 .player-bullet {
-  background-image: url("/src/assets/images/entities/player-bullet.png");
+  background-image: url('/src/assets/images/entities/player-bullet.png');
   animation: Growing 2s ease-in-out infinite;
 }
 
 .enemy-bullet {
-  background-image: url("/src/assets/images/entities/enemy-bullet.png");
+  background-image: url('/src/assets/images/entities/enemy-bullet.png');
 }
 
 .asteroid {

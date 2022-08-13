@@ -1,19 +1,19 @@
 /*Page default styles.*/
-@import url("default.css");
+@import url('default.css');
 /*Global common styles.*/
-@import url("common.css");
+@import url('common.css');
 /*Header chunk styles.*/
-@import url("header.css");
+@import url('header.css');
 /*Gaming container..*/
-@import url("container.css");
+@import url('container.css');
 /*Start page styles.*/
-@import url("start.css");
+@import url('start.css');
 /*Play page styles.*/
-@import url("play.css");
+@import url('play.css');
 /*Over page styles.*/
-@import url("over.css");
+@import url('over.css');
 /*Rank page styles.*/
-@import url("rank.css");
+@import url('rank.css');
 
 /*Root*/
 #app {
@@ -28,7 +28,7 @@
 #bg {
   width: 2000px;
   height: 2000px;
-  background: url("../assets/images/bg.jpg") repeat;
+  background: url('../assets/images/bg.jpg') repeat;
   animation: Background 60s linear infinite, Background2 420s linear infinite reverse;
   position: absolute;
   left: 50%;

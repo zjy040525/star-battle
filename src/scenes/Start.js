@@ -1,33 +1,33 @@
-import Scene from "../classes/Scene";
-import initAudioClasses from "../classes/Audio";
-import { $start } from "../libs/elem";
-import { game } from "../Game";
-import rnd from "../utils/rnd";
+import Scene from '../classes/Scene'
+import initAudioClasses from '../classes/Audio'
+import { $start } from '../libs/elem'
+import { game } from '../Game'
+import rnd from '../utils/rnd'
 
 // Start scene, default show pages.
 export default class Start extends Scene {
   constructor() {
-    super("#start");
+    super('#start')
   }
 
   mount() {
-    super.setup();
+    super.setup()
     // main handler.
     $start.startBtn.addEventListener(
-      "click",
+      'click',
       () => {
         // Init audio classes.
-        initAudioClasses();
-        game.next();
+        initAudioClasses()
+        game.next()
       },
       // clicked removed event.
       { once: true }
-    );
+    )
     // Random load preview planet image.
-    $start.previewImage.src = `/common/images/planets/big${rnd(0, 4)}.png`;
+    $start.previewImage.src = `/common/images/planets/big${rnd(0, 4)}.png`
   }
 
   unmount() {
-    super.uninstall();
+    super.uninstall()
   }
 }

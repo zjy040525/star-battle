@@ -1,3 +1,3 @@
-const isBullet = (elem) => elem.classList.contains("player-bullet");
+const isBullet = (elem) => elem.classList.contains('player-bullet')
 
-export default isBullet;
+export default isBullet

@@ -1,19 +1,19 @@
-window.$ = (selector) => document.querySelector(selector);
-window.$s = (selector) => document.querySelectorAll(selector);
+window.$ = (selector) => document.querySelector(selector)
+window.$s = (selector) => document.querySelectorAll(selector)
 
 export default class Scene {
   constructor(selector, className) {
     // Get scene.
-    this.scene = $(selector);
+    this.scene = $(selector)
     // Set scene toggle className.
-    this.className = className || "hidden";
+    this.className = className || 'hidden'
   }
 
   setup() {
-    this.scene.classList.remove(this.className);
+    this.scene.classList.remove(this.className)
   }
 
   uninstall() {
-    this.scene.classList.add(this.className);
+    this.scene.classList.add(this.className)
   }
 }

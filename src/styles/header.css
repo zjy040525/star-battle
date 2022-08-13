@@ -65,7 +65,7 @@
 
 /*Icon configuration.*/
 #fuelIcon {
-  background-image: url("/src/assets/images/playing/fuel-icon.png");
+  background-image: url('/src/assets/images/playing/fuel-icon.png');
   position: relative;
 }
 
@@ -75,41 +75,41 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("/src/assets/images/entities/fuel.png") bottom no-repeat;
+  background: url('/src/assets/images/entities/fuel.png') bottom no-repeat;
   background-size: cover;
   transition: height 250ms ease-in-out;
 }
 
 #scoreIcon {
-  background-image: url("/src/assets/images/playing/score-icon.png");
+  background-image: url('/src/assets/images/playing/score-icon.png');
 }
 
 #timeIcon {
-  background-image: url("/src/assets/images/playing/time-icon.png");
+  background-image: url('/src/assets/images/playing/time-icon.png');
 }
 
 #pause {
-  background-image: url("/src/assets/images/controls/pause.png");
+  background-image: url('/src/assets/images/controls/pause.png');
 }
 
 .unpause {
-  background-image: url("/src/assets/images/controls/play.png") !important;
+  background-image: url('/src/assets/images/controls/play.png') !important;
 }
 
 #mute {
-  background-image: url("/src/assets/images/controls/mute.png");
+  background-image: url('/src/assets/images/controls/mute.png');
 }
 
 .unmute {
-  background-image: url("/src/assets/images/controls/unmute.png") !important;
+  background-image: url('/src/assets/images/controls/unmute.png') !important;
 }
 
 #fontInc {
-  background-image: url("/src/assets/images/controls/font_inc.png");
+  background-image: url('/src/assets/images/controls/font_inc.png');
 }
 
 #fontDec {
-  background-image: url("/src/assets/images/controls/font_dec.png");
+  background-image: url('/src/assets/images/controls/font_dec.png');
 }
 
 @keyframes Logo {
