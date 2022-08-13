@@ -16,7 +16,7 @@ export default class Over extends Scene {
   mount() {
     super.setup()
     Audio.state.background.stop()
-    $over.playerName.oninput = (ev) => {
+    $over.playerName.oninput = ev => {
       const val = ev.target.value.trim()
       // trim invalid space char
       this.state.name = val

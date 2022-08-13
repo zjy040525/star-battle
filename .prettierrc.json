@@ -8,7 +8,7 @@
   "bracketSameLine": false,
   "endOfLine": "lf",
   "quoteProps": "as-needed",
-  "arrowParens": "always",
+  "arrowParens": "avoid",
   "trailingComma": "es5",
   "proseWrap": "preserve"
 }

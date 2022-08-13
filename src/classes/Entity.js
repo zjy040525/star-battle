@@ -2,8 +2,8 @@ import rnd from '../utils/rnd'
 import Animation from './Animation'
 import Game from '../Game'
 import { Audio } from './Audio'
-import isBullet from '../utils/isBullet'
-import isPlayer from '../utils/isPlayer'
+import isBullet from '../components/isBullet'
+import isPlayer from '../components/isPlayer'
 import { $header, $play } from '../libs/elem'
 
 export default class Entity {
@@ -22,11 +22,11 @@ export default class Entity {
     {
       className: 'fuel',
       start: {
-        x: (el) => rnd(0, $play.box.offsetWidth - el.offsetWidth),
-        y: (el) => -el.offsetHeight,
+        x: el => rnd(0, $play.box.offsetWidth - el.offsetWidth),
+        y: el => -el.offsetHeight,
       },
       end: {
-        x: (el) => rnd(0, $play.box.offsetWidth - el.offsetWidth),
+        x: el => rnd(0, $play.box.offsetWidth - el.offsetWidth),
         y: () => $play.box.offsetHeight,
       },
       duration: [9000, 16000],
@@ -40,10 +40,10 @@ export default class Entity {
       className: 'asteroid',
       start: {
         x: () => $play.box.offsetWidth,
-        y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
+        y: el => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
-        x: (el) => -el.offsetWidth,
+        x: el => -el.offsetWidth,
       },
       duration: [9000, 16000],
       provide(elem) {
@@ -73,10 +73,10 @@ export default class Entity {
       className: 'friend',
       start: {
         x: () => $play.box.offsetWidth,
-        y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
+        y: el => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
-        x: (el) => -el.offsetWidth,
+        x: el => -el.offsetWidth,
       },
       duration: [9000, 16000],
       provide(elem) {
@@ -95,10 +95,10 @@ export default class Entity {
       className: 'enemy',
       start: {
         x: () => $play.box.offsetWidth,
-        y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
+        y: el => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
-        x: (el) => -el.offsetWidth,
+        x: el => -el.offsetWidth,
       },
       duration: [9000, 16000],
       provide(elem) {
@@ -125,10 +125,10 @@ export default class Entity {
       className: 'big-planet',
       start: {
         x: () => $play.box.offsetWidth,
-        y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
+        y: el => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
-        x: (el) => -el.offsetWidth,
+        x: el => -el.offsetWidth,
       },
       duration: [5000, 8000],
       provide(elem) {
@@ -140,10 +140,10 @@ export default class Entity {
       className: 'small-planet',
       start: {
         x: () => $play.box.offsetWidth,
-        y: (el) => rnd(0, $play.box.offsetHeight - el.offsetHeight),
+        y: el => rnd(0, $play.box.offsetHeight - el.offsetHeight),
       },
       end: {
-        x: (el) => -el.offsetWidth,
+        x: el => -el.offsetWidth,
       },
       duration: [9000, 12000],
       provide(elem) {
@@ -213,22 +213,22 @@ export default class Entity {
   }
 
   static getAsteroid() {
-    return [...$s('#box .asteroid')].filter((entity) => !entity.collided)
+    return [...$s('#box .asteroid')].filter(entity => !entity.collided)
   }
 
   static getFriend() {
-    return [...$s('#box .friend')].filter((entity) => !entity.collided)
+    return [...$s('#box .friend')].filter(entity => !entity.collided)
   }
 
   static getEnemy() {
-    return [...$s('#box .enemy')].filter((entity) => !entity.collided)
+    return [...$s('#box .enemy')].filter(entity => !entity.collided)
   }
 
   static getBullet() {
-    return [...$s('#box .player-bullet')].filter((bullet) => !bullet.collided)
+    return [...$s('#box .player-bullet')].filter(bullet => !bullet.collided)
   }
 
   static getEnemyBullet() {
-    return [...$s('#box .enemy-bullet')].filter((bullet) => !bullet.collided)
+    return [...$s('#box .enemy-bullet')].filter(bullet => !bullet.collided)
   }
 }

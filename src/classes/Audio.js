@@ -23,9 +23,9 @@ const initAudioClasses = () => {
     constructor(filename, audioConfig) {
       this.audioConfig = audioConfig
       this.audio = fetch(`/common/sounds/${filename}`)
-        .then((res) => res.arrayBuffer())
-        .then((buf) => aCtx.decodeAudioData(buf))
-        .then((decoded) => {
+        .then(res => res.arrayBuffer())
+        .then(buf => aCtx.decodeAudioData(buf))
+        .then(decoded => {
           this.src.buffer = this.tempBuffer = decoded
           // connected gain node.
           this.src.connect(gainNode)
@@ -66,7 +66,7 @@ const initAudioClasses = () => {
   // Init all audios.
   Audio.state = {
     // playing state.
-    background: new Audio('background.mp3', (audio) => (audio.loop = true)),
+    background: new Audio('background.mp3', audio => (audio.loop = true)),
     // asteroid/enemy/friend dropped audio.
     destroyed: new Audio('destroyed.mp3'),
     // fire bullet audio.

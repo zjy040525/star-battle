@@ -4,7 +4,7 @@ import { Audio } from '../classes/Audio'
 import { $app, $header, $play } from '../libs/elem'
 import Game, { game } from '../Game'
 import Entity from '../classes/Entity'
-import collision from '../utils/collision'
+import collision from '../components/collision'
 
 class Header extends Scene {
   constructor() {
@@ -17,11 +17,11 @@ class Header extends Scene {
     if (Game.props.paused) {
       Play.ctx.on()
       // Resume all not collided element anim.
-      animations.filter((anim) => !anim.effect['target'].collided).forEach((anim) => anim.play())
+      animations.filter(anim => !anim.effect['target'].collided).forEach(anim => anim.play())
       Audio.ctx.resume().then()
     } else {
       Play.ctx.off()
-      animations.forEach((anim) => anim.pause())
+      animations.forEach(anim => anim.pause())
       Audio.ctx.suspend().then()
     }
     // Toggle paused status.
@@ -150,7 +150,7 @@ class Player {
       (target, entity) => entity.collidedFn(target, entity)
     )
     // Player bullet collision listener.
-    Entity.getBullet().forEach((bullet) =>
+    Entity.getBullet().forEach(bullet =>
       collision(
         bullet,
         [
@@ -169,7 +169,7 @@ class Player {
 
   #bullets() {
     // Bullets moving.
-    ;[...Entity.getBullet(), ...Entity.getEnemyBullet()].forEach((bullet) => {
+    ;[...Entity.getBullet(), ...Entity.getEnemyBullet()].forEach(bullet => {
       bullet.style.left = `${bullet.offsetLeft + bullet.direction}px`
       // Max move range.
       if (bullet.offsetLeft < -bullet.offsetWidth || bullet.offsetLeft > $play.box.offsetWidth) {
@@ -177,7 +177,7 @@ class Player {
       }
     })
     // Random fire enemy bullet.
-    Entity.getEnemy().forEach((entity) => {
+    Entity.getEnemy().forEach(entity => {
       // Init last fire timestamp.
       if (!entity.lastTime) entity.lastTime = Play.ctx.currTime
       if (Play.ctx.currTime > entity.lastTime + entity.nextTime) {
@@ -202,11 +202,11 @@ class Player {
 
   setup() {
     // Init joystick event.
-    Player.on($play.toUp, (value) => (this.state.up = value))
-    Player.on($play.toLeft, (value) => (this.state.left = value))
-    Player.on($play.toRight, (value) => (this.state.right = value))
-    Player.on($play.toDown, (value) => (this.state.down = value))
-    document.onkeydown = (ev) => {
+    Player.on($play.toUp, value => (this.state.up = value))
+    Player.on($play.toLeft, value => (this.state.left = value))
+    Player.on($play.toRight, value => (this.state.right = value))
+    Player.on($play.toDown, value => (this.state.down = value))
+    document.onkeydown = ev => {
       if (!Game.playing) return
       if (this.state.keyPause && ev.code === 'KeyP') {
         // Pause/Play game.
@@ -241,7 +241,7 @@ class Player {
 export default class Play extends Scene {
   #header = new Header()
   #player = new Player()
-  #listener = new Listener((ctx) => {
+  #listener = new Listener(ctx => {
     if (Game.state.fuel <= 0) {
       // Reset time.
       ctx.prevTime = ctx.currTime = 0

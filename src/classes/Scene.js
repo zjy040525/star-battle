@@ -1,5 +1,5 @@
-window.$ = (selector) => document.querySelector(selector)
-window.$s = (selector) => document.querySelectorAll(selector)
+window.$ = selector => document.querySelector(selector)
+window.$s = selector => document.querySelectorAll(selector)
 
 export default class Scene {
   constructor(selector, className) {

@@ -48,8 +48,8 @@ export default class Animation {
     const animQueue = []
     const { amount, size, offset, duration } = burstConfig
     // Cancel all animations.
-    getAnim.filter((anim) => anim instanceof CSSAnimation).forEach((anim) => anim.cancel())
-    getAnim.forEach((anim) => anim.pause())
+    getAnim.filter(anim => anim instanceof CSSAnimation).forEach(anim => anim.cancel())
+    getAnim.forEach(anim => anim.pause())
     entity.collided = true
     entity.style.backgroundImage = 'none'
     for (let i = 0; i < rnd(amount[0], amount[1]); i++) {

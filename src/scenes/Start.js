@@ -3,6 +3,7 @@ import initAudioClasses from '../classes/Audio'
 import { $start } from '../libs/elem'
 import { game } from '../Game'
 import rnd from '../utils/rnd'
+import getHitokoto from '../components/hitokoto'
 
 // Start scene, default show pages.
 export default class Start extends Scene {
@@ -12,6 +13,7 @@ export default class Start extends Scene {
 
   mount() {
     super.setup()
+    getHitokoto()
     // main handler.
     $start.startBtn.addEventListener(
       'click',

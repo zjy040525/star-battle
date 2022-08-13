@@ -8,7 +8,7 @@ export default class Listener {
   }
 
   #animate(timestamp) {
-    this.rAF = requestAnimationFrame((timestamp) => this.#animate(timestamp))
+    this.rAF = requestAnimationFrame(timestamp => this.#animate(timestamp))
     // Calc elapsed time since last loop.
     this.now = timestamp
     this.elapsed = this.now - this.then
