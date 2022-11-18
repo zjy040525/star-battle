@@ -5,7 +5,9 @@
 
 # Getting Started
 
-**不再提供在线游玩链接，需要请自行构建。**
+[vercel.com](https://star-battle-five.vercel.app/)
+
+[cloud.tencent.com](https://star-battle-3gpvcgh5d281c967-1256732922.ap-shanghai.app.tcloudbase.com/)
 
 [Releases](https://github.com/Haitecins/star-battle/releases/)中提供了不需要构建的版本，游戏需要在HTTP中运行！
 
