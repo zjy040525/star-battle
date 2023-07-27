@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@types/node':
-    specifier: ^18.0.6
-    version: 18.0.6
+    specifier: ^20.4.5
+    version: 20.4.5
   husky:
     specifier: ^8.0.1
     version: 8.0.1
@@ -22,7 +22,7 @@ devDependencies:
     version: 9.5.0
   vite:
     specifier: ^4.0.4
-    version: 4.1.4(@types/node@18.0.6)
+    version: 4.1.4(@types/node@20.4.5)
   vite-plugin-html:
     specifier: ^3.2.0
     version: 3.2.0(vite@4.1.4)
@@ -323,8 +323,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node@18.0.6:
-    resolution: {integrity: sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==}
+  /@types/node@20.4.5:
+    resolution: {integrity: sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==}
     dev: true
 
   /@types/normalize-package-data@2.4.1:
@@ -2284,10 +2284,10 @@ packages:
       html-minifier-terser: 6.1.0
       node-html-parser: 5.3.3
       pathe: 0.2.0
-      vite: 4.1.4(@types/node@18.0.6)
+      vite: 4.1.4(@types/node@20.4.5)
     dev: true
 
-  /vite@4.1.4(@types/node@18.0.6):
+  /vite@4.1.4(@types/node@20.4.5):
     resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2312,7 +2312,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.0.6
+      '@types/node': 20.4.5
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
