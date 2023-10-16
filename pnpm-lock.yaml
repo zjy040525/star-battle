@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@types/node':
-    specifier: ^18.0.6
-    version: 18.0.6
+    specifier: ^20.8.6
+    version: 20.8.6
   husky:
     specifier: ^8.0.1
     version: 8.0.1
@@ -22,7 +22,7 @@ devDependencies:
     version: 9.5.0
   vite:
     specifier: ^4.0.4
-    version: 4.1.4(@types/node@18.0.6)
+    version: 4.1.4(@types/node@20.8.6)
   vite-plugin-html:
     specifier: ^3.2.0
     version: 3.2.0(vite@4.1.4)
@@ -323,8 +323,10 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node@18.0.6:
-    resolution: {integrity: sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==}
+  /@types/node@20.8.6:
+    resolution: {integrity: sha512-eWO4K2Ji70QzKUqRy6oyJWUeB7+g2cRagT3T/nxYibYcT4y2BDL8lqolRXjTHmkZCdJfIPaY73KbJAZmcryxTQ==}
+    dependencies:
+      undici-types: 5.25.3
     dev: true
 
   /@types/normalize-package-data@2.4.1:
@@ -2251,6 +2253,10 @@ packages:
     dev: true
     optional: true
 
+  /undici-types@5.25.3:
+    resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}
+    dev: true
+
   /universalify@2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
@@ -2284,10 +2290,10 @@ packages:
       html-minifier-terser: 6.1.0
       node-html-parser: 5.3.3
       pathe: 0.2.0
-      vite: 4.1.4(@types/node@18.0.6)
+      vite: 4.1.4(@types/node@20.8.6)
     dev: true
 
-  /vite@4.1.4(@types/node@18.0.6):
+  /vite@4.1.4(@types/node@20.8.6):
     resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2312,7 +2318,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.0.6
+      '@types/node': 20.8.6
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
